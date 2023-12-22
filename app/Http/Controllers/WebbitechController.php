@@ -50,12 +50,15 @@ class WebbitechController extends Controller
 
     public function update(Request $request,$id)
     {
+        $photo = $request->file('photo');
+        $photo = $this->fileupload($photo,public_path('/photo'),'photo');
+
         $name = $request->input('uname');
         $password = $request->input('upassword');
         $email = $request->input('uemail');
-        $photo = $request->input('uphoto');
+        $photos = $photo;
 
-        DB::update('update mydetails set name=?, password=?, email=?, photo=? where id=?',[$name,$password,$email,$photo,$id]);
+        DB::update('update mydetails set name=?, password=?, email=?, photo=? where id=?',[$name,$password,$email,$photos,$id]);
         return redirect('list')->with('message','updated');
     }
 

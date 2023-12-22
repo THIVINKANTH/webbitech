@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>photo</td>
-            <td><input type="file" name="uphoto" value="{{ $edits->photo }}"></td>
+            <td><input type="file" name="photo" value="{{ $edits->photo }}"></td>
         </tr>
         <tr>
             <td><button type="submit">Submit</button></td>
