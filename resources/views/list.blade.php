@@ -18,7 +18,7 @@
 </div>
 
     <div class="row justify-content-end mt-3" style="margin-right: 15px">
-        <a href="insert_form" type="button" class="btn btn-outline-info" >Add more</a>
+        <a href="{{ url('insert')}}" type="button" class="btn btn-outline-info" >Add more</a>
     </div>
     <table class="table-responsive-md table table-striped shadow rounded mt-3">
         <thead >
