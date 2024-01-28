@@ -39,7 +39,7 @@
             <td>{{ $lists->name }}</td>
             <td>{{ $lists->password }}</td>
             <td>{{ $lists->email }}</td>
-            <td>{{ $lists->photo }}</td>
+            <td><img src="{{ $lists->photo }}" alt="png" id="photo"></td>
 
                 <td><a href="update/{{ $lists->id }}" type="button" class="btn btn-outline-warning">Edit</a>
                     <a href="delete/{{ $lists->id }}" type="button" class="btn btn-outline-danger">Delete</a>
