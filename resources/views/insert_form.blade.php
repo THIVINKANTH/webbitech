@@ -57,6 +57,13 @@
                     <td><input type="file" name="photo" ></td>
                 </tr>
                 <tr>
+                    <select name="selected_value">
+                        <option value="value1">Value 1</option>
+                        <option value="value2">Value 2</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </tr>
+                <tr>
                     <td><button type="submit" >Submit</button></td>
                 </tr>
             </tbody>

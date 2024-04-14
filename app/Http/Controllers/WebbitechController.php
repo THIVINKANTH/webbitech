@@ -49,7 +49,7 @@ class WebbitechController extends Controller
             'photo' => $photoPath, // Save the path to the image in the database
         ]);
 
-        return redirect('/list')->with('success', 'Record inserted successfully');
+        return redirect('/list')->with('message', 'Record inserted successfully');
     }
 
 
@@ -98,7 +98,9 @@ class WebbitechController extends Controller
 
     public function delete($id)
     {
-        DB::delete('delete from mydetails where id=?',[$id]);
-        return redirect('list');
+        $user = Mydetails::findOrFail($id);
+        $user->delete();
+        return redirect('list')->with('success', 'Record deleted successfully');
     }
+
 }
