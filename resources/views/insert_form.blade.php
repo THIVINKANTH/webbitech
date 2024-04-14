@@ -15,7 +15,7 @@
     <style>
         .table
         {
-           padding: 200px  500px;
+           padding: 150px  500px;
         }
         button
         {
@@ -30,30 +30,38 @@
 
         }
     </style>
-    <form action="{{ url('/insert')}}" method="POST" enctype="multipart/form-data">
-        @csrf
-       <table class="table">
-        <tr>
-            <td>Name</td>
-            <td><input type="text" name="name" ></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" ></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="email" name="email" ></td>
-        </tr>
-        <tr>
-            <td>Photo</td>
-            <td><input type="file" name="photo" ></td>
-        </tr>
-        <tr>
-            <td><button type="submit">Submit</button></td>
-        </tr>
-       </table>
-       <div>{{ session('message') }}</div>
-    </form>
+    <div>
+        <form action="{{ url('/insert')}}" method="POST" enctype="multipart/form-data">
+            @csrf
+           <table class="table row justify-content-center table-responsive-md table table-striped rounded">
+            <thead>
+                <tr class="row justify-content-center text-center">
+                    <th style="border-style: none">User Details</th>
+                </tr>
+            </thead>
+            <tbody class="mt-3">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" ></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" ></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" ></td>
+                </tr>
+                <tr>
+                    <td>Photo</td>
+                    <td><input type="file" name="photo" ></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" >Submit</button></td>
+                </tr>
+            </tbody>
+           </table>
+        </form>
+    </div>
 </body>
 </html>
